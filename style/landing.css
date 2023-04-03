@@ -1,0 +1,102 @@
+/* Variables */
+
+:root {
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-keys: #37474f;
+  --color-keys-light: #e5e5e5;
+}
+
+/* Universal and body */
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--color-start);
+}
+
+/* .grayscale-100 {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+  } */
+
+/* rock paper scissors emojis */
+
+#emoji-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.emoji {
+  height: 144px;
+  width: 144px;
+}
+
+.rock {
+  background: transparent no-repeat left center
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270a.svg');
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background-size: 80%;
+}
+
+.paper {
+  background: transparent no-repeat center bottom
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270b.svg');
+  background-size: 90%;
+}
+
+.scissors {
+  background: transparent no-repeat center bottom
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270c.svg');
+}
+
+/* Main content */
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+main > div {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 100px;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 60px;
+  color: #fff;
+}
+
+/* Buttons */
+
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  color: var(--color-keys);
+  background-color: var(--color-keys-light);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 200px;
+  text-decoration: none;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
