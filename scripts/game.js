@@ -75,9 +75,10 @@ function startTimer() {
   let timer = setInterval(function () {
     if (timeLeft === 0) {
       secondsDisplay.innerText = '';
-      countdowndiv.classList.toggle('countanim');
       p1Hand.classList.toggle('animate-hand-one');
       p2Hand.classList.toggle('animate-hand-two');
+      countdowndiv.classList.toggle('countanim');
+
       endGame(playerOneChoice, playerTwoChoice);
       clearInterval(timer);
       return;
