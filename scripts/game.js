@@ -2,11 +2,11 @@
 const gameMode = localStorage.getItem('game-mode');
 
 const backgroundImageUrls = [
-  '../../assets/img/backgroundForest.png',
-  '../../assets/img/backgroundCastles.png',
-  '../../assets/img/backgroundColorDesert.png',
-  '../../assets/img/backgroundDesert.png',
-  '../../assets/img/backgroundEmpty.png',
+  '../assets/img/backgroundForest.png',
+  '../assets/img/backgroundCastles.png',
+  '../assets/img/backgroundColorDesert.png',
+  '../assets/img/backgroundDesert.png',
+  '../assets/img/backgroundEmpty.png',
 ];
 const handUrls = [
   'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270a.svg',
