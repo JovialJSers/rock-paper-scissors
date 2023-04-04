@@ -27,6 +27,8 @@ let playerTwoChoice = 'rock';
 const p1Hand = document.getElementById('hand-one');
 const p2Hand = document.getElementById('hand-two');
 
+const countdowndiv = document.getElementById('countdown')
+
 // set random background
 let randomBackgroundIdx = Math.floor(
   Math.random() * backgroundImageUrls.length
@@ -65,7 +67,7 @@ function startTimer() {
 
   updateHand(p1Hand, playerOneChoice);
   updateHand(p2Hand, playerTwoChoice);
-
+  countdowndiv.classList.toggle('countanim');
   p1Hand.classList.toggle('animate-hand-one');
   p2Hand.classList.toggle('animate-hand-two');
 
@@ -75,6 +77,8 @@ function startTimer() {
       secondsDisplay.innerText = '';
       p1Hand.classList.toggle('animate-hand-one');
       p2Hand.classList.toggle('animate-hand-two');
+      countdowndiv.classList.toggle('countanim');
+
       endGame(playerOneChoice, playerTwoChoice);
       clearInterval(timer);
       return;

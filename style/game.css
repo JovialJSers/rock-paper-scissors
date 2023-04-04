@@ -120,7 +120,46 @@ main {
   border-radius: 50%;
   text-align: center;
 }
+.countanim {
+  animation-name: countanim;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s ;
+}
+@keyframes countanim {
 
+
+  0%{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    animation-duration: 1s;
+
+  }
+
+  33%{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    animation-duration: 1s;
+
+  }
+  66%{
+    background-color: yellow;
+    width: 150px;
+    height: 150px;
+    animation-duration: 1s;
+
+  }
+  100%{
+    background-color: green;
+    width: 75px;
+    height: 75px;
+    animation-duration: 1s;
+
+  }
+
+}
 p {
   margin: 0;
 }
