@@ -1,4 +1,7 @@
 // global variables
+
+let countdownDiv = document.getElementById("countdown")
+
 const gameMode = localStorage.getItem('game-mode');
 
 const backgroundImageUrls = [
@@ -69,12 +72,17 @@ function startTimer() {
   p1Hand.classList.toggle('animate-hand-one');
   p2Hand.classList.toggle('animate-hand-two');
 
+  secondsDisplay.classList.toggle('number-Animation');
+  countdownDiv.classList.add('countdown-Animation');
+
   let timeLeft = 3;
   let timer = setInterval(function () {
     if (timeLeft === 0) {
       secondsDisplay.innerText = '';
       p1Hand.classList.toggle('animate-hand-one');
       p2Hand.classList.toggle('animate-hand-two');
+      secondsDisplay.classList.toggle('number-Animation');
+      countdownDiv.classList.remove('countdown-Animation');
       endGame(playerOneChoice, playerTwoChoice);
       clearInterval(timer);
       return;
