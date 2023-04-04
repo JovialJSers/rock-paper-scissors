@@ -1,0 +1,263 @@
+:root {
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-keys: #37474f;
+  --color-keys-light: #e5e5e5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../../assets/img/backgroundForest.png');
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  width: 80%;
+}
+
+/* Scoreboard */
+
+#scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.player-score {
+  display: flex;
+  column-gap: 10px;
+}
+
+.player-score p {
+  font-size: 3em;
+}
+
+#hero-img1 {
+  height: 144px;
+  width: 144px;
+  border: 2px solid black;
+  border-radius: 1em;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 90%;
+  background-color: var(--color-keys);
+}
+
+#hero-img2 {
+  height: 144px;
+  width: 144px;
+  border: 2px solid black;
+  border-radius: 1em;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 90%;
+  background-color: var(--color-keys);
+}
+
+/* Playing Field */
+
+#game-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hand-one {
+  background: transparent no-repeat left center
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270a.svg');
+  -webkit-transform: rotate(270deg) scaleY(-1);
+  -ms-transform: rotate(270deg) scaleY(-1);
+  transform: rotate(270deg) scaleY(-1);
+  background-size: 80%;
+  height: 200px;
+  width: 200px;
+  margin-left: 144px;
+  position: relative;
+}
+
+.animate-hand-one {
+  animation-duration: 1s;
+  animation-name: left-hand-move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-hand-two {
+  animation-duration: 1s;
+  animation-name: right-hand-move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#hand-two {
+  background: transparent no-repeat left center
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/270a.svg');
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background-size: 80%;
+  height: 200px;
+  width: 200px;
+  margin-right: 144px;
+  position: relative;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+#keys {
+  display: flex;
+  justify-content: space-between;
+}
+
+#keys > div {
+  display: flex;
+  column-gap: 10px;
+}
+.btn__reset {
+  width: 50px;
+  padding: 16px;
+  background: var(--color-keys-light);
+  /* color: #fff; */
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.3);
+  border-right: solid 3px rgba(0, 0, 0, 0.3);
+}
+
+.rock {
+  height: 24px;
+  width: 24px;
+  background: transparent no-repeat center bottom
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1faa8.svg');
+}
+.paper {
+  height: 24px;
+  width: 24px;
+  background: transparent no-repeat center bottom
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4f0.svg');
+}
+.scissors {
+  height: 24px;
+  width: 24px;
+  background: transparent no-repeat center bottom
+    url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2702.svg');
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+}
+
+/* keyframes */
+
+@keyframes left-hand-move {
+  0% {
+    transform: rotate(270deg) scaleY(-1);
+  }
+  12.5% {
+    transform: rotate(245deg) scaleY(-1);
+    top: -25px;
+    left: -12.5px;
+  }
+  25% {
+    transform: rotate(225deg) scaleY(-1);
+    top: -50px;
+    left: -25px;
+  }
+  37.5% {
+    transform: rotate(200deg) scaleY(-1);
+    top: -75px;
+    left: -37.5px;
+  }
+  50% {
+    transform: rotate(180deg) scaleY(-1);
+    top: -100px;
+    left: -50px;
+  }
+  62.5% {
+    transform: rotate(200deg) scaleY(-1);
+    top: -75px;
+    left: -37.5px;
+  }
+  75% {
+    transform: rotate(225deg) scaleY(-1);
+    top: -50px;
+    left: -25px;
+  }
+  87.5% {
+    transform: rotate(245deg) scaleY(-1);
+    top: -25px;
+    left: -12.5px;
+  }
+  100% {
+    transform: rotate(270deg) scaleY(-1);
+  }
+}
+
+@keyframes right-hand-move {
+  0% {
+    transform: rotate(270deg);
+  }
+  12.5% {
+    transform: rotate(295deg);
+    top: -25px;
+    left: 12.5px;
+  }
+  25% {
+    transform: rotate(315deg);
+    top: -50px;
+    left: 25px;
+  }
+  37.5% {
+    transform: rotate(335deg);
+    top: -75px;
+    left: 37.5px;
+  }
+  50% {
+    transform: rotate(360deg);
+    top: -100px;
+    left: 50px;
+  }
+  62.5% {
+    transform: rotate(335deg);
+    top: -75px;
+    left: 37.5px;
+  }
+  75% {
+    transform: rotate(315deg);
+    top: -50px;
+    left: 25px;
+  }
+  87.5% {
+    transform: rotate(295deg);
+    top: -25px;
+    left: 12.5px;
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}

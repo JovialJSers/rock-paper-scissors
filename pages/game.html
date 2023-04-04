@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="../style/game.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="scoreboard">
+        <div class="player-score">
+          <div id="hero-img1"></div>
+          <p class="score">0</p>
+        </div>
+        <div class="player-score">
+          <p class="score">0</p>
+          <div id="hero-img2"></div>
+        </div>
+      </section>
+
+      <section id="game-area" >
+        <div id="hand-one"></div>
+        <div id="countdown"><p id="seconds">Press [space] to start</p></div>
+        <div id="hand-two"></div>
+      </section>
+      <div id="keys">
+        <div id="player-one-keys">
+          <div class="key">
+            <div class="btn__reset">A</div>
+            <div class="rock"></div>
+          </div>
+          <div class="key">
+            <div class="btn__reset">S</div>
+            <div class="paper"></div>
+          </div>
+          <div class="key">
+            <div class="btn__reset">D</div>
+            <div class="scissors"></div>
+          </div>
+        </div>
+        <div id="player-two-keys">
+          <div class="key">
+            <div class="btn__reset">J</div>
+            <div class="rock"></div>
+          </div>
+          <div class="key">
+            <div class="btn__reset">K</div>
+            <div class="paper"></div>
+          </div>
+          <div class="key">
+            <div class="btn__reset">L</div>
+            <div class="scissors"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../scripts/game.js"></script>
+  </body>
+</html>
