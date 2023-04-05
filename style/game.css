@@ -119,11 +119,58 @@ main {
   height: 200px;
   border-radius: 50%;
   text-align: center;
+
+
+}
+
+.number-Animation {
+  animation-name: numberAnimation;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+
+}
+
+@keyframes numberAnimation {
+
+  0%   {color:yellow;}
+  33%  {color:blue;}
+  66%  {color: green;}
+  100%  {color: red ;}
+}
+
+
+.countdown-Animation {
+  animation-name: countdownAnimation;
+  border: 5px dashed yellow;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+
+}
+
+@keyframes countdownAnimation {
+
+  0%   {border-color:yellow;}
+  33%  {border-color:blue;}
+  66%  {border-color: green;}
+  100%  {border: 10px solid red ;}
+
+  from{
+      height: 200px;
+      width: 200px;
+  }
+  to{
+      height: 100px;
+      width: 100px;
+  }
 }
 
 p {
   margin: 0;
 }
+
+
 
 #keys {
   display: flex;
